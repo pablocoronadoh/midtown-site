@@ -1,0 +1,180 @@
+/* Common button styles */
+.button {
+	float: left;
+	min-width: 88px;
+	max-width: 250px;
+	display: block;
+	padding: 5px;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+	color: #37474f;
+	border-color: #37474f;
+}
+
+
+.button--size-s {
+	font-size: 16px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	text-transform: uppercase;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid #303e48;
+}
+
+
+/* Rayen */
+.button--rayen {
+	overflow: hidden;
+	padding: 0;
+	width: 88px;
+}
+.button--rayen.button--inverted {
+	color: #fff;
+}
+.button--rayen::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #303e48; /* Transition Color*/
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	color: #fff;
+}
+.button--rayen.button--inverted::before {
+	background: #fff;
+	color: #37474f;
+}
+.button--rayen > span {
+	display: block;
+}
+.button--rayen::before,
+.button--rayen > span {
+	padding: 12px 6px;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--rayen:hover::before {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--rayen:hover > span {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+
+
+
+/**********
+SPECS BUTTON
+**********/
+.specs .button {
+	float: left;
+	min-width: 250px;
+	max-width: 250px;
+	display: block;
+	padding: 0;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.specs .button:focus {
+	outline: none;
+}
+.specs .button > span {
+	vertical-align: middle;
+}
+.specs .button--size-s {
+	font-size: 14px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	text-transform: uppercase;
+}
+.button--text-thick {
+	font-weight: normal;
+}
+
+/* Borders */
+.specs .button--border-thin {
+	border: 1px solid #fff;
+}
+
+
+/* Rayen */
+.specs .button--rayen {
+	overflow: hidden;
+	padding: 0;
+	width: 88px;
+}
+.specs .button--rayen.button--inverted {
+	color: #fff;
+}
+.specs .button--rayen::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fcb4a9; /* Transition Color*/
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+.specs .button--rayen.button--inverted::before {
+	background: #fff;
+	color: #37474f;
+}
+.specs .button--rayen > span {
+	display: block;
+}
+.specs .button--rayen::before,
+.specs .button--rayen > span {
+	padding: 3px 6px;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.specs .button--rayen:hover::before {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.specs .button--rayen:hover > span {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
