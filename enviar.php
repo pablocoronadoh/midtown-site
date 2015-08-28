@@ -2,7 +2,7 @@
 	//set_include_path(get_include_path() . PATH_SEPARATOR . 'C:\xampp\htdocs\torneo');
 	// require 'PHPMailerAutoload.php';
 	require 'PHPMailerAutoload.php';
-	if($_POST && isset($_POST['nombre'], $_POST['email'], $_POST['asunto'],$_POST['mensaje'])){
+	if($_POST && isset($_POST['nombre'], $_POST['email'],$_POST['mensaje'])){
 		//
 		// var_dump($_POST);
 		$nombre=$_POST['nombre'];
